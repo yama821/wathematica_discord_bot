@@ -9,7 +9,7 @@ class ChannelInfo(TypedDict):
 
 
 # Fundamental settings
-bot_name: str = "Wathematica Bot"
+bot_name: str = "Wathematica Bot (OB/OG)"
 category_info: dict[str, ChannelInfo] = {
     "general": {
         "id": 1341052072300118087, #1218953598550020137,
