@@ -1,0 +1,17 @@
+# fly.toml app configuration file generated for wathematica-discord-bot-test on 2025-02-19T00:10:20+09:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'wathematica-discord-bot-test'
+primary_region = 'nrt'
+
+# command = "uv run app.py"
+
+[env]
+  UV_PROJECT_ENVIRONMENT = "/venv"
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
