@@ -44,6 +44,10 @@ if __name__ == "__main__":
         # Launch bot
         bot.run(token)
     else:
-        raise FileNotFoundError(
-            "[NO TOKEN PROVIDED] check docker-compose.yml to see how you can expose token at /run/secrets/discord_token"
-        )
+        token = os.environ.get("discord_token")
+        if token is None:
+            raise FileNotFoundError(
+                "[NO TOKEN PROVIDED] check docker-compose.yml to see how you can expose token at /run/secrets/discord_token"
+            )
+        print("SUCCESS to get token by env.")
+        bot.run(token)
